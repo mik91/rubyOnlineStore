@@ -5,7 +5,7 @@
 <ul>
     <% @AboutList.each do |elem| %>
         <li>
-            <%= elem.title %>
+            <a href="/about/<%= elem.id %>"><%= elem.title %></a>
         </li>
     <% end %>
 </ul>
