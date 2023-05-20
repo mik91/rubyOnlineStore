@@ -1,2 +1,11 @@
 <h1>About me</h1>
 <p>Addy get no bitches</p>
+<p><%= @about %></p>
+<p><br></p>
+<ul>
+    <% @AboutList.each do |elem| %>
+        <li>
+            <%= elem.title %>
+        </li>
+    <% end %>
+</ul>
