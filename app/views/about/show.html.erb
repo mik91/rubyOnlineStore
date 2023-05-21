@@ -4,3 +4,12 @@
 <p>Created at: <%= about.created_at %></p>
 <p>Updated at: <%= about.updated_at %></p>
 <p>Part number: <%= about.part_number %></p>
+
+<ul>
+    <li><%= link_to "Edit", edit_about_path(@about) %></li>
+    <li><%= link_to "Destroy", about_path(@about), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+    <li><%= link_to "Back", about_path %></li>
+</ul>
