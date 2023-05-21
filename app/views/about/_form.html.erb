@@ -11,6 +11,7 @@
     <%= form.text_area :body %>
     <% @about.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
+    <% end %>
 </div>
 <div>
     <%= form.label :price %>

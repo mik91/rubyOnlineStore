@@ -1,6 +1,6 @@
 class AboutController < ApplicationController
   def index
-    @about = "This is the about page"
+    @info = "This is the about page"
     @AboutList = About.all
   end
 
@@ -9,7 +9,8 @@ class AboutController < ApplicationController
   end
 
   def new
-    @about = About.new
+    @newAbout = About.new
+    @yes = "yes"
   end
 
   def create
@@ -22,19 +23,19 @@ class AboutController < ApplicationController
     end
   end
 
-  def edit
-    @about = About.find(params[:id])
-  end
+  # def edit
+  #   @about = About.find(params[:id])
+  # end
 
-  def update
-    @about = About.find(params[:id])
+  # def update
+  #   @about = About.find(params[:id])
 
-    if @about.update(about_params)
-      redirect_to @about
-    else
-      render 'edit', status: :unprocessable_entity
-    end
-  end
+  #   if @about.update(about_params)
+  #     redirect_to @about
+  #   else
+  #     render 'edit', status: :unprocessable_entity
+  #   end
+  # end
 
   def destroy
     @about = About.find(params[:id])
